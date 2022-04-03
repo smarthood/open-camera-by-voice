@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/open-camera-by-voice/static/css/main.073c9b0a.css",
+    "main.js": "/open-camera-by-voice/static/js/main.913d9cd2.js",
+    "index.html": "/open-camera-by-voice/index.html",
+    "main.073c9b0a.css.map": "/open-camera-by-voice/static/css/main.073c9b0a.css.map",
+    "main.913d9cd2.js.map": "/open-camera-by-voice/static/js/main.913d9cd2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.913d9cd2.js"
+  ]
+}
