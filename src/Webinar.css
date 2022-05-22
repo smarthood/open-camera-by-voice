@@ -1,0 +1,70 @@
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script';
+.centertitle{
+    position:relative;
+    margin:0 auto;
+    top:5px;
+    font-family: 'Dancing Script', cursive;
+  }
+  .neonText-lightBlue{
+    font-size: 40px;
+    padding:20px;
+    color:#fff;
+    text-shadow:
+      0 0 5px #25d7fb,
+      0 0 10px #25d7fb,
+      0 0 15px #25d7fb,
+      0 0 20px #25d7fb,
+      0 0 25px #25d7fb,
+      0 0 30px #25d7fb
+      ;
+      animation: 2s anim-lineUp ease-out 1;
+  }
+  .neonText-Lightgreen{
+    font-size:40px;
+    padding:20px;
+    color:#fff;
+
+    text-shadow:
+      0 0 5px #00ff66,
+      0 0 10px #00ff66,
+      0 0 15px #00ff66,
+      0 0 20px #00ff66,
+      0 0 25px #00ff66,
+      0 0 30px #00ff66
+      ;
+      animation: 2s anim-lineUp ease-out 1;
+      animation-delay: 0.2s;
+  }
+  .neonText-LightPink{
+    font-size:20px;
+    padding:20px;
+    color:#fff;
+    text-shadow:
+      0 0 5px #ff63a2,
+      0 0 10px #ff63a2,
+      0 0 15px #ff63a2,
+      0 0 20px #ff63a2,
+      0 0 25px #ff63a2,
+      0 0 30px #ff63a2
+      ;
+      animation: 2s anim-lineUp ease-out 1;
+      animation-delay: 0.5s;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  

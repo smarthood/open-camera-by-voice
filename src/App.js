@@ -1,19 +1,20 @@
-import './App.css';
-import Main from './Components/Main'
-import Camera from './Components/Camera'
+import React from 'react'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import Home from './Home'
+import Technical from './Technical'
+import Nontechnical from './Nontechnical'
+import Webinar from './Webinar'
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <Router>
-      <Routes>
-        <Route path="/" element={<Main />}/>
-        <Route path="/camera" element={<Camera />} />
-      </Routes>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/technical" element={<Technical />} />
+          <Route path="/non-technical" element={<Nontechnical />} />
+          <Route path="/Webinar" element={<Webinar />} />
+        </Routes>
     </Router>
-    </div>
-  );
+  )
 }
-
-export default App;

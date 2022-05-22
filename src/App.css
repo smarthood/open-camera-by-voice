@@ -1,10 +1,46 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Odibee+Sans&display=swap');
+:root {
+  --clr-neon: #18ffd8;
+  --clr-bg: #121212;
+}
+.neon-button {
+  font-size: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+  background-color: transparent;
+  box-shadow: 0 0 10px #18ffd8, 0 0 10px #18ffd8 inset, 0 0 30px #18ffd8, 0 0 30px #18ffd8 inset;
+  position: relative;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.neon-button:hover,
+.neon-button:focus {
+  background-color: var(--clr-neon);
+  color: white;
+  text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,16 +50,21 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: url(./bg.jpg);
+  font-family: "Balsamiq Sans", cursive;
+  color: var(--clr-neon);
+}
+.btn_container{
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  bottom: 40px;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +76,217 @@
   to {
     transform: rotate(360deg);
   }
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img{
+  padding-top: 10px;
+  width: 300px;
+}
+.title .color{
+  color: white;
+  font-size: 3rem;
+  padding-top: 20px;
+  font-family: 'Odibee Sans', cursive;
+}
+.the-neon-sign {
+  border: 5px #fff solid;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #ff18a7, 0 0 10px #ff18a7 inset, 0 0 30px #ff18a7, 0 0 30px #ff18a7 inset;
+  margin-top: 3rem;
+  position: relative;
+  width: 130px;
+  height: 130px;
+}
+
+.cr-neon {
+  user-select: none;
+  font-size: 4rem;
+  font-family: "Metrophobic", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  animation: 12s cr-neon-pink;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /*
+   *	Do we like this? No.. is it for the better good?
+   *	yes.
+   */
+}
+.cr-neon .cr-neon-sub {
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  transform: rotate(-10deg);
+  font-size: 3rem;
+  animation: 10s cr-neon-green;
+}
+.cr-neon.codepen-mid {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+}
+
+.the-neon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.the-neon-wrapper .the-neon-info {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.the-neon-wrapper .the-neon-info h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.the-neon-wrapper .the-neon-info p {
+  color: #b1b1e3;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes cr-neon-green {
+  0% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  2% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  2.5% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  3% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  4% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  4.5% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  10% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  10.5% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  11% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  51% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  52% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  55% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  55.5% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  85% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+  85.5% {
+    text-shadow: -2px 2px 0px #021c07, -2px -2px 0px #021c07, 2px 2px 0px #021c07, 2px -2px 0px #021c07, 0px 0px 5px #021c07, 0px 0px 20px #021c07, 0px 0px 30px #021c07, 0px 0px 120px #021c07, 0px 0px 130px #021c07;
+  }
+  86% {
+    text-shadow: -2px 2px 0px #94f701, -2px -2px 0px #94f701, 2px 2px 0px #94f701, 2px -2px 0px #94f701, 0px 0px 5px #94f701, 0px 0px 20px #94f701, 0px 0px 30px #94f701, 0px 0px 120px #94f701, 0px 0px 130px #94f701;
+  }
+}
+@keyframes cr-neon-pink {
+  0% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  1% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  3% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  3.5% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  4.5% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  5% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  20% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  20.5% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  21% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  31% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  32% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  45% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  45.5% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  65% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+  65.5% {
+    text-shadow: -2px 2px 0px #1f021a, -2px -2px 0px #1f021a, 2px 2px 0px #1f021a, 2px -2px 0px #1f021a, 0px 0px 5px #1f021a, 0px 0px 20px #1f021a, 0px 0px 30px #1f021a, 0px 0px 120px #1f021a, 0px 0px 130px #1f021a;
+  }
+  66% {
+    text-shadow: -2px 2px 0px #ff18a7, -2px -2px 0px #ff18a7, 2px 2px 0px #ff18a7, 2px -2px 0px #ff18a7, 0px 0px 5px #ff18a7, 0px 0px 20px #ff18a7, 0px 0px 30px #ff18a7, 0px 0px 120px #ff18a7, 0px 0px 130px #ff18a7;
+  }
+}
+body,
+html {
+  background: #121212;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: -20px;
+  opacity: 0.5;
+  width: 100%;
+  background: white;
+  padding: 10px;
+}
+.footer a{
+  color: rgba(0, 0, 0, 0.678);
+  text-decoration: none;
+}
+.back_btn{
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  z-index: 1000000;
 }
